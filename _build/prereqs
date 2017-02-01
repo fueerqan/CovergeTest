@@ -1,0 +1,13 @@
+do{ my $x = {
+       'build_requires' => {
+                             'Test::More' => 0
+                           },
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'DateTime' => '1.39',
+                       'Log::Minimal' => '0.19'
+                     },
+       'test_requires' => {}
+     };
+$x; }
