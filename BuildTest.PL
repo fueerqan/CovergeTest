@@ -10,4 +10,3 @@ my $build = Module::Build->resume (
 
 $build->dispatch('build');
 $build->dispatch('testcover');
-;
