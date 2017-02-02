@@ -8,16 +8,16 @@ system "cover -delete";
 system "perl BuildTest.PL";
 
 if( $? == -1 ){
-	print "Failed to run Coverage Test : $!\n";
+	print "Failed to run Build and Coverage Test : $!\n";
 }else{
 	print "Coverage Test Successed : \n";
-}
 
-# convert Coverage Summary to HTML format
-print "Converting Coverage test to HTML format\n";
+	# convert Coverage Summary to HTML format
+	print "Converting Coverage test to HTML format\n";
+	system "cover";
 
-system "cover";
+	if($? == -1){
+		print "Failed to convert to HTML : $!\n";
+	}
 
-if($? == -1){
-	print "Failed to convert to HTML : $!\n";
 }
