@@ -14,6 +14,7 @@ if( $? == -1 ){
 
 	# convert Coverage Summary to HTML format
 	print "Converting Coverage test to HTML format\n";
+
 	system "cover";
 
 	if($? == -1){
